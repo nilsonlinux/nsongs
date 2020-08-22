@@ -65,15 +65,15 @@ nsongs () {
   read option
   case $option in
     s) echo && echo -e " ${r}Iniciando${endc} ${y}Instalação${endc}"; sudo apt install sox && sudo mkdir /usr/share/sounds/nsongs/ && cd nsongs && sudo cp * /usr/share/sounds/nsongs/ ; saidacomando ;;
-    n) echo -e " ${y}OK. Retornando para o menu anterior${end}"; sleep 1;;
+    n) echo -e " ${y}Ok.${end}"; sleep 1;;
     *) echo -e " \"$option\"  ${r}Comando inválido!${endc}"; sleep 1; nsongs ;;
   esac
 }
 ###############################################################################
 # Comando executado
 saidacomando () {
-    echo && echo -e "Você executou a instalação do${b}$1${enda}."
-    echo -e " Volte para o menu anterior."
+    echo && echo -e "Você acabou de copiar os arquivos de audio para sua pasta /usr/share/sounds/nsongs/${b}$1${enda}."
+    echo -e " Veja a opção 2 para concluir."
     echo && echo -e " ${y}Digite Enter para retornar.${endc}"
     read input ;
 }
