@@ -64,7 +64,7 @@ nsongs () {
   echo && echo -en " ${y}Deseja continuar? {s/n}${endc} "
   read option
   case $option in
-    s) echo && echo -e " ${r}Iniciando${endc} ${y}Instalação${endc}"; sudo apt install sox && mkdir sudo mkdir /usr/share/sounds/nsongs && wget https://raw.githubusercontent.com/nilsonlinux/nsongs && cp nsongs sudo mkdir /usr/share/sounds/ ; saidacomando ;;
+    s) echo && echo -e " ${r}Iniciando${endc} ${y}Instalação${endc}"; sudo apt install sox && mkdir sudo mkdir /usr/share/sounds/nsongs && wget https://raw.githubusercontent.com/nilsonlinux/nsongs/nsongs-xfce.sh && cp nsongs sudo mkdir /usr/share/sounds/ ; saidacomando ;;
     n) echo -e " ${y}OK. Retornando para o menu anterior${end}"; sleep 1;;
     *) echo -e " \"$option\"  ${r}Comando inválido!${endc}"; sleep 1; mpd ;;
   esac
