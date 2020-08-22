@@ -64,9 +64,9 @@ nsongs () {
   echo && echo -en " ${y}Deseja continuar? {s/n}${endc} "
   read option
   case $option in
-    s) echo && echo -e " ${r}Iniciando${endc} ${y}Instalação${endc}"; sudo apt install sox && mkdir sudo mkdir /usr/share/sounds/nsongs && wget https://raw.githubusercontent.com/nilsonlinux/nsongs/nsongs-xfce.sh && cp nsongs sudo mkdir /usr/share/sounds/ ; saidacomando ;;
+    s) echo && echo -e " ${r}Iniciando${endc} ${y}Instalação${endc}"; sudo apt install sox && sudo mkdir /usr/share/sounds/nsongs/ && cd nsongs && sudo cp * /usr/share/sounds/nsongs/ ; saidacomando ;;
     n) echo -e " ${y}OK. Retornando para o menu anterior${end}"; sleep 1;;
-    *) echo -e " \"$option\"  ${r}Comando inválido!${endc}"; sleep 1; mpd ;;
+    *) echo -e " \"$option\"  ${r}Comando inválido!${endc}"; sleep 1; nsongs ;;
   esac
 }
 ###############################################################################
@@ -84,9 +84,7 @@ do
 logo
 echo -e "         ${b}[ NSONGS ]${enda}"echo -e "
 "
-echo -e $B"        [$R"01"$B]$G mpd + ncmpcpp$P"
-echo -e $B"        [$R"02"$B]$G polybar$P"
-echo -e $B"        [$R"03"$B]$G Instalar todos$P"
+echo -e $B"        [$R"01"$B]$G Instalar$P"
 echo -e $B"        --------------------------$B"
 echo -e $B"        [$R"0"$B]$G Fechar o script"
 echo
