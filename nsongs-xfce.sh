@@ -59,7 +59,7 @@ nsongsexit () {
 ###############################################################################
 nsongs () {
   logo
-  echo -e " ${y}Você irá instalar o Nsongs${endc}" && echo
+  echo -e " ${y}Você irá instalar o Nsongs${endc}"
   echo -e " ${bu}Tudo será configurado automaticamente.${enda}"
   echo && echo -en " ${y}Deseja continuar? {s/n}${endc} "
   read option
@@ -85,6 +85,7 @@ logo
 echo -e "         ${b}[ NSONGS ]${enda}"echo -e "
 "
 echo -e $B"        [$R"1"$B]$G Instalar$P"
+echo -e $B"        [$R"2"$B]$G Concluir$P"
 echo -e $B"        --------------------------$B"
 echo -e $B"        [$R"0"$B]$G Fechar o script"
 echo
@@ -92,6 +93,7 @@ echo -en " Digite a opção: "
 read option
 case $option in
 1) nsongs ;;
+2) x-www-browser nilsonlinux.github.io ;;
 0) nsongsexit ;;
 *) echo -e " \"$option\" ${r}Opção inválida!${endc}"; sleep 1 ;;
 esac
