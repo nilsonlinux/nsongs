@@ -84,7 +84,7 @@ do
 logo
 echo -e "         ${b}[ NSONGS ]${enda}"echo -e "
 "
-echo -e $B"        [$R"01"$B]$G Instalar$P"
+echo -e $B"        [$R"1"$B]$G Instalar$P"
 echo -e $B"        --------------------------$B"
 echo -e $B"        [$R"0"$B]$G Fechar o script"
 echo
